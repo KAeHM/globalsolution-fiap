@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo';
+
+    overflow-x: hidden;
+}
+
+
+body {
+    width: 100vw;
+}
+
+h1{
+    font-size: 33px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p{
+    font-size: 24px;
+}
+
+.header{
+    width: 100%;
+    background-color: #2F2F2F;
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 3%;
+}
+
+#title {
+    color: #CA0D67;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 53px;
+}
+
+#user-points {
+    color: #CA0D67;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+#main-container{
+    background-color: #EFEFEF;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#top {
+    width: 70%;
+    padding: 50px 0px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#quizz-box{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.quizz{
+    display: flex;
+    flex-direction: column;
+}
+
+.quizz-name {
+    color: #000000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.quizz-question {
+    color: #000000;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+.quizz-radio{
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quizz-radio-label{
+    display: flex;
+    gap: 15px;
+}
+
+.quizz-radio-label label{
+    color: #000000;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+.quizz-radio-label input[type="radio"] {
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 8px;
+
+}
+
+.quizz-radio-label .correct-answer {
+    display: none;
+}
+
+.quizz-radio-label input[type="radio"]:checked {
+    background-color: #CA0D67;
+  }
+
+.quizz-range{
+    display: flex;
+    gap: 10px;
+}
+
+input[type=range] {
+    height: 27px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 50%;
+    background: transparent;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #303030;
+    border-radius: 0px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #CA0D67;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #303030;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #303030;
+    border-radius: 0px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #CA0D67;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #303030;
+    border-radius: 0px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #303030;
+    border-radius: 0px;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #CA0D67;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #303030;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #303030;
+  }
+
+
+.quizz-range-value{
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43px;
+}
+
+.quizz-range-arrow{
+    color: #000000;
+    display: none;
+}
+
+.quizz-range-right-value{
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43px;
+    display: none;
+}
+
+.quizz-button{
+    background: #CA0D67;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+
+    height: 43px;
+    max-width: 131px;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    font-size: 24px;
+}
+
+.quizz-button:hover{
+    background-color: #a50c56;
+}
+
+.dividers {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider{
+    width: 40%;
+    height: 3px;
+    background-color: #000000;
+}
+
+/* ----- */
+
+
+.bottom{
+    padding: 50px 0px;
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.subtitle {
+    color: #000000;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+}
+
+.text {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+.mention{
+    max-width: 650px;
+    align-self: center;
+}
+
+.mention-text {
+    color: #000000;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 32px;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 50px 0px;
+}
+
+.previous-page{
+    color: #CA0D67;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: none;
+}
+
+.next-page{
+    color: #CA0D67;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.info-points {
+    align-self: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.circle {
+    border: 2px solid #CA0D67;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle p{
+    color: #CA0D67;
+}
+
+.circle hr{
+    width: 100%;
+    border: 1px solid #CA0D67;
+}
+
+.video{
+    width: 80%;
+    align-self: center;
+}
+
+
+@media (max-width: 728px)
+{
+    h1{
+        font-size: 25px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p{
+        font-size: 16px;
+    }
+}
+
